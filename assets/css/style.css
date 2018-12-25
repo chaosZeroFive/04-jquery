@@ -1,2 +1,35 @@
-/* CSS Document */
+body{
+    background-image: image('assets/images/amethyst-3847_1920.jpg');
+}
 
+
+#title {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #F56712;
+    margin: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    height: 5rem;
+    width: 30%;
+}
+#info {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: 14px;
+    color: #042D13;
+    background-color: #AFA274;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+    vertical-align: text-top;
+    display: block;
+    height: auto;
+    width: 30%;
+}
