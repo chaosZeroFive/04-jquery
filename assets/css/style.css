@@ -1,14 +1,13 @@
 body{
-    background-image: image('assets/images/amethyst-3847_1920.jpg');
+    background-image: url("../images/amethyst4.png")
 }
-
 
 #title {
     font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: xx-large;
     font-weight: bold;
-    background-color: #F56712;
+    background-color: #CC7037;
     margin: 5px;
     padding-top: 5px;
     padding-right: 5px;
@@ -16,20 +15,69 @@ body{
     padding-left: 5px;
     text-align: center;
     vertical-align: middle;
-    display: block;
-    height: 5rem;
-    width: 30%;
+    display: table-cell;
+    height: 72px;
 }
 #info {
     font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-    font-size: 14px;
-    color: #042D13;
-    background-color: #AFA274;
+    font-size: large;
+    color: #5BA35A;
+    background-color: #FBE6CF;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     text-align: left;
     vertical-align: text-top;
     display: block;
     height: auto;
-    width: 30%;
+    width: 50%;
+    line-height: 24px;
+}
+
+#main{
+    
+}.game-number {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: x-large;
+    font-weight: bold;
+    color: #000000;
+    background-color: #53C987;
+}
+#game-number {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: x-large;
+    font-weight: bold;
+    color: #000000;
+    background-color: #53C987;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    float: left;
+    height: 100px;
+    width: 20%;
+    vertical-align: middle;
+}
+#game-info {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: medium;
+    font-weight: normal;
+    color: #000000;
+    background-color: #3AFEFD;
+    vertical-align: middle;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    float: left;
+    height: 100px;
+    width: 80px;
+}
+
+.info-box{
+    background-color: #3AFEFD;
+}
+.number-box{
+    background-color: #53C987;
+}
+
+.crystal-image{
+    height: 200px;
 }
