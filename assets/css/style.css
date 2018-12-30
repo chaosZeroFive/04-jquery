@@ -1,83 +1,101 @@
 body{
     background-image: url("../images/amethyst4.png")
 }
-
-#title {
-    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-    color: #FFFFFF;
-    font-size: xx-large;
-    font-weight: bold;
-    background-color: #CC7037;
-    margin: 5px;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-    height: 72px;
-}
-#info {
-    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-    font-size: large;
-    color: #5BA35A;
-    background-color: #FBE6CF;
-    margin: 5px;
-    padding: 10px;
-    text-align: left;
-    vertical-align: text-top;
-    display: block;
-    height: auto;
-    width: 50%;
-    line-height: 24px;
-}
-
-#main{
+#crystal-orange{
     
-}.game-number {
-    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-    font-size: x-large;
-    font-weight: bold;
-    color: #000000;
-    background-color: #53C987;
 }
-#game-number {
-    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-    font-size: x-large;
-    font-weight: bold;
-    color: #000000;
-    background-color: #53C987;
-    display: block;
-    margin: 5px;
-    padding: 5px;
-    float: left;
-    height: 100px;
-    width: 20%;
-    vertical-align: middle;
+#crystal-orange:hover{
+    opacity: 0.5;
 }
-#game-info {
-    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-    font-size: medium;
-    font-weight: normal;
-    color: #000000;
-    background-color: #3AFEFD;
-    vertical-align: middle;
-    display: block;
-    margin: 5px;
-    padding: 5px;
-    float: left;
-    height: 100px;
-    width: 80px;
+#crystal-purple{
+    
+}
+#crystal-purple:hover{
+    opacity: 0.5;
+}
+#crystal-green{
+    height: auto;
+}
+#crystal-green:hover{
+    opacity: 0.5;
+}
+#crystal-blue{
+    
+}
+#crystal-blue:hover{
+    opacity: 0.5;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
 }
 
-.info-box{
-    background-color: #3AFEFD;
-}
-.number-box{
-    background-color: #53C987;
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+
 }
 
-.crystal-image{
-    height: 200px;
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+
 }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	
+}
+
+/* iPad 3 (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (-webkit-min-device-pixel-ratio : 2),
+only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (min-resolution: 192dpi) { 
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+	
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+	
+}
+
+/* Retina displays ----------- */
+@media  only screen 
+and (-webkit-min-device-pixel-ratio : 2), 
+only screen 
+and (min-resolution: 192dpi) {
+
+}
+
