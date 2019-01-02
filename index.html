@@ -68,11 +68,11 @@
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Wins:
-                                <span id="wins" class="badge badge-dark badge-pill">10</span>
+                                <span id="wins" class="badge badge-dark badge-pill">--</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Losses:
-                                <span id="losses" class="badge badge-dark badge-pill">10</span>
+                                <span id="losses" class="badge badge-dark badge-pill">--</span>
                             </li>
                         </ul>
                     </div>
@@ -84,46 +84,61 @@
                         <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Total Score:
-                                <span id="score" class="badge badge-dark badge-pill">10</span>
+                                <span id="score" class="badge badge-dark badge-pill">--</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <hr>
-                <div class="card">
-                    <button class="btn btn-primary">Let's Play</button>
-                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-primary" onClick="resetGame()">Let's Play</button>
             </div>
         </div>
         <hr>
         <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success" role="alert"></div>
+                <div class="alert alert-warning" role="alert"></div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <button id="testBtn" class="btn" onClick="clickCrystal(blueNum, totalScore)">blue</button>
-                        <img id="crystal-blue" class="card-img-top" src="assets/images/1x/crystal-bluemdpi.png" alt="blue">
+                        <a id="linkBlue">
+                            <img id="crystal-blue" class="card-img-top" src="assets/images/1x/crystal-bluemdpi.png" alt="blue">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <img id="crystal-green" class="card-img-top" src="assets/images/1x/crystal-greenmdpi.png" alt="green">
+                        <a id="linkGreen">
+                            <img id="crystal-green" class="card-img-top" src="assets/images/1x/crystal-greenmdpi.png" alt="green">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <img id="crystal-orange" class="card-img-top" src="assets/images/1x/crystal-orangemdpi.png" alt="orange">
+                        <a id="linkOrange">
+                            <img id="crystal-orange" class="card-img-top" src="assets/images/1x/crystal-orangemdpi.png" alt="orange">
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        
-                        <img id="crystal-purple" class="card-img-top" src="assets/images/1x/crystal-purplemdpi.png" alt="purple">
+                        <a id="linkPurple">
+                            <img id="crystal-purple" class="card-img-top" src="assets/images/1x/crystal-purplemdpi.png" alt="purple">
+                        </a>
                     </div>
                 </div>
             </div>
