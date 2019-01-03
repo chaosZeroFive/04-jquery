@@ -4,10 +4,10 @@ $(document).ready(function () {
     console.log("ready!");
     $(".alert-warning").hide();
     $(".alert-success").hide();
-    /*$("#crystal-blue").hide();
+    $("#crystal-blue").hide();
     $("#crystal-green").hide();
     $("#crystal-orange").hide();
-    $("#crystal-purple").hide();*/
+    $("#crystal-purple").hide();
     var randomNumber = 0,
         blueVal = 0,
         greenVal = 0,
@@ -48,6 +48,11 @@ function playGame() {
     loss = 0;
     $("#losses").html(0);
     console.log("This is the initial value of losses: " + loss);
+    
+    $("#crystal-blue").show();
+    $("#crystal-green").show();
+    $("#crystal-orange").show();
+    $("#crystal-purple").show();
 }
 
 $("#crystal-blue").click(function () {
