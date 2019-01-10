@@ -1,13 +1,8 @@
 // JavaScript Document
-//declarations
+//on document ready logs "ready", hides crystals, and variable declarations
 $(document).ready(function () {
     console.log("ready!");
-    $(".alert-warning").hide();
-    $(".alert-success").hide();
-    $("#crystal-blue").hide();
-    $("#crystal-green").hide();
-    $("#crystal-orange").hide();
-    $("#crystal-purple").hide();
+    $('.crystalButton').hide();
     var randomNumber = 0,
         blueVal = 0,
         greenVal = 0,
@@ -18,133 +13,157 @@ $(document).ready(function () {
         loss = 0;
 });
 
+var lastGame = {
+    gameNumber: 0,
+    blueNumber: 0,
+    greenNumber: 0,
+    orangeNumber: 0,
+    purpleNumber: 0,
+    totalScore: 0
+    
+}
+
 //player clicks the Let's Play button to begin the game
+//unhides crystals, hides the instructions / gif, 
 function playGame() {
+    genRandom();
+    
     $("#lets-play").hide();
-    randomNumber = parseInt(Math.floor(Math.random() * 120) + 19);
-    $("#game-number").html(randomNumber);
-    console.log("This is the value of randomNumber: " + randomNumber);
     
-    blueVal = parseInt(Math.floor(Math.random() * 12) + 1);
-    console.log("This is the value of blueVal: " + blueVal);
+    $('#mainDiv').hide();
     
-    greenVal = parseInt(Math.floor(Math.random() * 12) + 1);
-    console.log("This is the value of greenVal: " + greenVal);
-    
-    orangeVal = parseInt(Math.floor(Math.random() * 12) + 1);
-    console.log("This is the value of orangeVal: " + orangeVal);
-    
-    purpleVal = parseInt(Math.floor(Math.random() * 12) + 1);
-    console.log("This is the value of purpleVal: " + purpleVal);
-    
+    $('.crystalButton').show();
+    //set score to zero
     score = 0;
     $("#score").html(0);
     console.log("This is the value of score: " + score);
-    
+    //set wins to zero
     wins = 0;
     $("#wins").html(0);
     console.log("This is the initial value of wins: " + wins);
-    
+    //set losses to zero
     loss = 0;
     $("#losses").html(0);
-    console.log("This is the initial value of losses: " + loss);
-    
-    $("#crystal-blue").show();
-    $("#crystal-green").show();
-    $("#crystal-orange").show();
-    $("#crystal-purple").show();
+    console.log("This is the initial value of losses: " + loss); 
 }
 
-$("#crystal-blue").click(function () {
-    if (score > randomNumber) {
-        gameLose();
-    }
-    else if (randomNumber === score) {
+//generates random numbers for game and crystals
+function genRandom(){
+    randomNumber = parseInt(Math.floor(Math.random() * 120) + 19);
+    console.log("This is the value of randomNumber: " + randomNumber);
+    lastGame.gameNumber = randomNumber;
+    $("#game-number").html(randomNumber);
+    
+    blueVal = parseInt(Math.floor(Math.random() * 12) + 1);
+    lastGame.blueNumber = blueVal;
+    console.log("This is the value of blueVal: " + blueVal);
+    
+    greenVal = parseInt(Math.floor(Math.random() * 12) + 1);
+    lastGame.greenNumber = greenVal;
+    console.log("This is the value of greenVal: " + greenVal);
+    
+    orangeVal = parseInt(Math.floor(Math.random() * 12) + 1);
+    lastGame.orangeNumber = orangeVal;
+    console.log("This is the value of orangeVal: " + orangeVal);
+    
+    purpleVal = parseInt(Math.floor(Math.random() * 12) + 1);
+    lastGame.purpleNumber = purpleVal;
+    console.log("This is the value of purpleVal: " + purpleVal);
+}
+$("#btnBlue").on('click', function() {
+    score += blueVal;
+    if (score === randomNumber){
         gameWin();
     }
+    else if (score > randomNumber){
+        gameLose();
+    }
     else {
-        console.log("The Player's score before the click is " + score);
-        console.log("You Clicked Blue with a value of " + blueVal);
-        score += blueVal;
-        console.log("The players's score is now " + score);
-        $("#score").html(score);
+        console.log("Score is now: " + score);
+        $('#scoreElement').html(score);
     }
 });
-
-$("#crystal-green").click(function () {
-    if (score > randomNumber) {
-        gameLose();
-    }
-    else if (randomNumber === score) {
+$("#btnGreen").on('click', function() {
+    score += greenVal;
+    if (score === randomNumber){
         gameWin();
     }
+    else if (score > randomNumber){
+        gameLose();
+    }
     else {
-        console.log("The Player's score before the click is " + score);
-        console.log("You Clicked Green with a value of " + greenVal);
-        score += greenVal;
-        console.log("The players's score is now " + score);
-        $("#score").html(score);
+        console.log("Score is now: " + score);
+        $('#scoreElement').html(score);
     }
 });
-
-$("#crystal-orange").click(function () {
-    if (score > randomNumber) {
-        gameLose();
-    }
-    else if (randomNumber == score) {
+$("#btnOrange").on('click', function() {
+    score += orangeVal;
+    if (score === randomNumber){
         gameWin();
     }
+    else if (score > randomNumber){
+        gameLose();
+    }
     else {
-        console.log("The Player's score before the click is " + score);
-        console.log("You Clicked Orange with a value of " + orangeVal);
-        score += orangeVal;
-        console.log("The players's score is now " + score);
-        $("#score").html(score);
+        console.log("Score is now: " + score);
+        $('#scoreElement').html(score);
     }
 });
-
-$("#crystal-purple").click(function () {
-    if (score > randomNumber) {
-        gameLose();
-    }
-    else if (randomNumber == score) {
+$("#btnPurple").on('click', function() {
+    score += purpleVal;
+    if (score === randomNumber){
         gameWin();
     }
+    else if (score > randomNumber){
+        gameLose();
+    }
     else {
-        console.log("The Player's score before the click is " + score);
-        console.log("You Clicked Purple with a value of " + purpleVal);
-        score += purpleVal;
-        console.log("The players's score is now " + score);
-        $("#score").html(score);
+        console.log("Score is now: " + score);
+        $('#scoreElement').html(score);
     }
 });
 
 function gameLose() {
+    var audio = document.getElementById('audioLose');
+    audio.play();
+    copyLast();
+    
     console.log("Player Lost");
-    $(".alert-success").hide();
-    $(".alert-warning").show();
-    $(".alert-warning").html("You Lost...");
-    $(".alert-success").html("");
     loss++;
     $("#losses").html(loss);
-    $(".alert-warning").show();
     resetGame();
+    $('#smallWon').html('');
+    $('#smallLoss').html('You Lost the Last Game!');
 }
 
 function gameWin() {
+    var audio = document.getElementById('audioWin');
+    audio.play();
+    copyLast();
     console.log("Player Won");
-    $(".alert-warning").hide();
-    $(".alert-success").show();
-    $(".alert-warning").html("");
-    $(".alert-success").html("You Won!");
     wins++;
     $("#wins").html(wins);
-    $(".alert-success").show();
     resetGame();
+    $('#smallLoss').html('');
+    $('#smallWon').html('You Won the Last Game!');
+}
+
+function copyLast(){
+    lastGame.gameNumber = randomNumber;
+    lastGame.blueNumber = blueVal;
+    lastGame.greenNumber = greenVal;
+    lastGame.orangeNumber = orangeVal;
+    lastGame.purpleNumber = purpleVal;
 }
 
 function resetGame(){
     console.clear();
+    console.log("Last Game | randomNumber: " + lastGame.gameNumber);
+    console.log("Last Game | blueVal: " + lastGame.blueNumber);
+    console.log("Last Game | greenVal: " + lastGame.gameNumber);
+    console.log("Last Game | orangeVal: " + lastGame.orangeNumber);
+    console.log("Last Game | purpleVal: " + lastGame.purpleNumber);
+    console.log("*********************************")
     randomNumber = parseInt(Math.floor(Math.random() * 120) + 19);
     blueVal = parseInt(Math.floor(Math.random() * 12) + 1);
     greenVal = parseInt(Math.floor(Math.random() * 12) + 1);
@@ -160,5 +179,3 @@ function resetGame(){
     console.log("from reset() | This is the value of purpleVal: " + purpleVal);
     console.log("from reset() | This is the value of score: " + score);
 }
-    //$(".alert-warning").hide();
-    //$(".alert-success").hide();

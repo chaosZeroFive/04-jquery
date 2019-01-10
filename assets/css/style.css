@@ -1,69 +1,75 @@
 body{
     background-image: url("../images/amethyst4.png")
 }
-#crystal-orange{
+.card-body{
+    f
 }
-#crystal-orange:hover{
+#btnBlue{
+    justify-content: space-between;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    margin: 4px;
+    background-image: url(../images/1x/crystal-bluemdpi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btnGreen{
+    justify-content: space-between;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    margin: 4px;
+    background-image: url(../images/1x/crystal-greenmdpi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btnOrange{
+    justify-content: space-between;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    margin: 4px;
+    background-image: url(../images/1x/crystal-orangemdpi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btnPurple{
+    justify-content: space-between;
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+    margin: 4px;
+    background-image: url(../images/1x/crystal-purplemdpi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.crystalButton{
     opacity: 0.5;
-}
-#crystal-purple{
-}
-#crystal-purple:hover{
-    opacity: 0.5;
-}
-#crystal-green{
-}
-#crystal-green:hover{
-    opacity: 0.5;
-}
-#crystal-blue{
-}
-#crystal-blue:hover{
-    opacity: 0.5;
-}
+    }
 
-#divStatus{
-}
-
-/* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
+.crystalButton:hover{
+    opacity: 1.0;
+    transform: scale(1.5, 1.5);
+    }
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-    #crystal-orange{
-        max-width: 100%;
-        height:  auto;
-    }
-    #crystal-purple{
-        max-width: 100%;
-        height:  auto;
-}    
+
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 321px) {
-
+    
 }
 
 /* Smartphones (portrait) ----------- */
 @media only screen 
 and (max-width : 320px) {
-
+    
 }
 
 /* iPads (portrait and landscape) ----------- */
