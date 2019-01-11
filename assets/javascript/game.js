@@ -71,6 +71,7 @@ function genRandom(){
     console.log("This is the value of purpleVal: " + purpleVal);
 }
 $("#btnBlue").on('click', function() {
+    console.log("Player Clicked Blue with a Value of: " + blueVal);
     score += blueVal;
     if (score === randomNumber){
         gameWin();
@@ -84,6 +85,7 @@ $("#btnBlue").on('click', function() {
     }
 });
 $("#btnGreen").on('click', function() {
+    console.log("Player Clicked Green with a Value of: " + greenVal);
     score += greenVal;
     if (score === randomNumber){
         gameWin();
@@ -97,6 +99,7 @@ $("#btnGreen").on('click', function() {
     }
 });
 $("#btnOrange").on('click', function() {
+    console.log("Player Clicked Orange with a Value of: " + orangeVal);
     score += orangeVal;
     if (score === randomNumber){
         gameWin();
@@ -110,6 +113,7 @@ $("#btnOrange").on('click', function() {
     }
 });
 $("#btnPurple").on('click', function() {
+    console.log("Player Clicked Purple with a Value of: " + purpleVal);
     score += purpleVal;
     if (score === randomNumber){
         gameWin();
