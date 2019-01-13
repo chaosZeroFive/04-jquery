@@ -178,14 +178,14 @@ function resetGame() {
 
 function getReward(){
     if (wins === 2 ){
-        $('#crystalButtons').before('<alert id="temp">You earned a reward! you can now see the value of the blue Crystal</alert>');
+        $('#crystalButtons').before('<alert id="temp"><strong>Boom...</strong>You earned a reward! you can now see the value of the blue Crystal</alert>');
         setTimeout(function(){
             $('#temp').remove();
         }, 5000); 
         $('#btnBlue').html(blueVal);
     }
     else if(wins > 2){
-        $('#crystalButtons').before('<alert id="temp">You earned a reward! you can now see the value of the Blue & Green Crystals</alert>');
+        $('#crystalButtons').before('<alert id="temp"><strong>Boom...</strong>You earned a reward! you can now see the value of the Blue & Green Crystals</alert>');
         setTimeout(function(){
             $('#temp').remove();
         }, 5000); 
